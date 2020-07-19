@@ -12,10 +12,10 @@ const roundHundreds = Math.ceil(sumRoundPrices/100)*100;
 const evenOddPrice = Math.floor(sumAllPrices) % 2 === 0 ? true : false;
 const restSum = 500 - sumAllPrices;
 const averagePrice = (sumAllPrices/3).toFixed(2);
-let discount = Math.floor(Math.random()*100);
-let sumDiscount = sumAllPrices.toFixed(2) - discount;
+const discount = Math.floor(Math.random()*100);
+const sumDiscount = sumAllPrices.toFixed(2) - discount;
 const cost = sumAllPrices.toFixed(2);
-let profit = cost/2 - discount;
+const profit = cost/2 - discount;
 
 
 
