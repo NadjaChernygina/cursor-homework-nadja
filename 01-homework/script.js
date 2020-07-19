@@ -1,20 +1,20 @@
-let price001 = 15.678;
-let price002 = 123.965;
-let price003 = 90.2345;
-let maxPrice = Math.max(price001, price002, price003);
-let minPrice = Math.min(price001, price002, price003);
-let sumAllPrices = price001 + price002 + price003;
-let roundPrices001 = Math.floor(price001);
-let roundPrices002 = Math.floor(price002);
-let roundPrices003 = Math.floor(price003);
-let sumRoundPrices = roundPrices001 + roundPrices002 + roundPrices003;
-let roundHundreds = Math.ceil(sumRoundPrices/100)*100;
-let evenOddPrice = Math.floor(sumAllPrices) % 2 === 0 ? true : false;
-let restSum = 500 - sumAllPrices;
-let averagePrice = (sumAllPrices/3).toFixed(2);
+const price001 = 15.678;
+const price002 = 123.965;
+const price003 = 90.2345;
+const maxPrice = Math.max(price001, price002, price003);
+const minPrice = Math.min(price001, price002, price003);
+const sumAllPrices = price001 + price002 + price003;
+const roundPrices001 = Math.floor(price001);
+const roundPrices002 = Math.floor(price002);
+const roundPrices003 = Math.floor(price003);
+const sumRoundPrices = roundPrices001 + roundPrices002 + roundPrices003;
+const roundHundreds = Math.ceil(sumRoundPrices/100)*100;
+const evenOddPrice = Math.floor(sumAllPrices) % 2 === 0 ? true : false;
+const restSum = 500 - sumAllPrices;
+const averagePrice = (sumAllPrices/3).toFixed(2);
 let discount = Math.floor(Math.random()*100);
 let sumDiscount = sumAllPrices.toFixed(2) - discount;
-let cost = sumAllPrices.toFixed(2);
+const cost = sumAllPrices.toFixed(2);
 let profit = cost/2 - discount;
 
 
