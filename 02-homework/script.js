@@ -7,8 +7,8 @@ while (isNaN(number1)) {
 
 let number2 = parseInt(prompt('Введіть друге число, будь ласка!'));
 
-while (isNaN(number2)) {
-    alert('це число нам не підходить, треба ЦІЛЕ число ');
+while (isNaN(number2) || (number2 < number1)) {
+    alert('це число нам не підходить, треба ЦІЛЕ числ, а також більше ніж попередне ');
     number2 = parseInt(prompt('Введіть друге число, будь ласка!'));
 }
 
