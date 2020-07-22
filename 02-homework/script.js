@@ -12,7 +12,7 @@ while (isNaN(number2) || (number2 < number1)) {
     number2 = parseInt(prompt('Введіть друге число, будь ласка!'));
 }
 
-let evenNumbers = confirm("Чи потрібно пропускати парні числа?");
+const evenNumbers = confirm("Чи потрібно пропускати парні числа?");
 
 let sum = 0;
 
