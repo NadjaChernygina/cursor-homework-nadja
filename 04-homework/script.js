@@ -18,7 +18,7 @@ function getPairs() {
     for (i = 0; i < girlsList.length; i++) {
         allStudents.push(girlsList[i]+ ', ' + boysList[i]);
     }
-    return allStudents;
+    return allStudents; 
 }
 
 const pairs = getPairs(students);
@@ -37,8 +37,33 @@ function getSubject() {
 const subgects = getSubject(pairs, themes);
 
 
+function getMarks() {
+    const studentsMark = [];
 
+    for (i = 0; i < students.length; i++) {
+        studentsMark.push(students[i]  + ': ' + marks[i]);
+    }
+
+    return studentsMark; 
+
+}
+
+const studentsMarks = getMarks(students, marks);
+
+
+function getRandomMark() {
+    const groups = [];
+    for (i = 0; i < students.length; i++) {
+        groups.push(pairs[i]  + ' : ' + themes[i] + ' = ' + Math.floor(Math.random(marks) * 5 + 1));
+    }
+
+    return groups;
+}
+
+const randomMark = getRandomMark(students, themes, marks);
 
 
 console.log('Розділіть студентів на пари: ', pairs);
 console.log('Зіставте пари з попереднього завдання та теми проєктів: ', subgects);
+console.log('Зіставте оцінки(marks) зі студентом(students): ', studentsMarks);
+console.log('Поставте кожній парі випадкову оцінку: ', randomMark);
