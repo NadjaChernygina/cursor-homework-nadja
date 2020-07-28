@@ -10,20 +10,7 @@ document.writeln(`<p><b>Функція, яка отримує будь-яке ч
 
 
 
-function getDegree() {
-    let number1 = parseInt(prompt('Введіть число, яке хочете піднести до ступеня'));
-
-    while (isNaN(number1)) {
-        alert('це число нам не підходить, треба ЦІЛЕ число');
-        number1 = parseInt(prompt('Введіть число, яке хочете піднести до ступеня'));
-    }
-
-    let number2 = parseInt(prompt('Введіть ступінь'));
-    
-    while (isNaN(number2) || (number2 < 1)) {
-        alert('це число нам не підходить, треба ЦІЛЕ число, а також не меньш ніж 1 ');
-        number2 = parseInt(prompt('Введіть ступінь'));
-    }
+function getDegree(number1, number2) {
 
     let result = number1;
 
@@ -36,21 +23,20 @@ function getDegree() {
 
 
 
-document.writeln(`<p><b>Функція, яка визначає ступінь числа:</b> ${getDegree()}</p>`);
+document.writeln(`<p><b>Функція, яка визначає ступінь числа:</b> ${getDegree(2, 5)}</p>`);
 
 
 
-function formatName() {
-    let myName = String(prompt('Введіть ваше імя')).toLowerCase();
+function formatName(name) {
+    const myName = name.toLowerCase();
 
-    let modifiedName =  myName.charAt(0).toUpperCase() + myName.slice(1); 
-
+    const modifiedName =  myName.charAt(0).toUpperCase() + myName.slice(1); 
 
     return modifiedName;
 }
 
 
-document.writeln(`<p><b>Функція, яка форматує ім'я, роблячи першу букву великою:</b> ${formatName()}</p>`);
+document.writeln(`<p><b>Функція, яка форматує ім'я, роблячи першу букву великою:</b> ${formatName('nADiia')}</p>`);
 
 function amountPayment(salary) {
     const tax = 19.5;
@@ -109,32 +95,35 @@ function convertCurrency(money) {
 convertCurrency("10$");
 
 
-function getRandomPassword(passLength) {
+function getRandomPassword(passLength = 8) {
     const numbers = "1234567890";
     let randomstring = '';
+    let randomNum = '';
 
 
     if (!isNaN(passLength) && passLength > 0 && passLength <= 8) {
          for (let i = 0; i< passLength; i++) {
 
-            let randomNum = Math.floor(Math.random() * numbers.length);
+            randomNum = Math.floor(Math.random() * numbers.length);
             randomstring += numbers.substring(randomNum,randomNum+1);
         }
 
     
     } else {
-        alert("not correct number");
+        randomNum = Math.floor(Math.random() * numbers.length);
+        randomstring += numbers.substring(randomNum,randomNum+1);
     }
 
     return randomstring;
     
 }
 
-document.writeln(`<p><b>Функцію генерації випадкового паролю:</b> ${getRandomPassword(6)}</p>`);
+document.writeln(`<p><b>Функцію генерації випадкового паролю:</b> ${getRandomPassword()}</p>`);
 
 
 function deleteLetters(letter, word) {
-    let modifiedWord = word.toLowerCase();
+    const modifiedWord = word.toLowerCase();
+    let ourWord;
 
     for (let i = 0; i < word.length; i++ ) {
         ourWord = modifiedWord.replace(letter, '');
@@ -143,4 +132,4 @@ function deleteLetters(letter, word) {
     return ourWord;
 }
 
-document.writeln(`<p><b>Функція, яка видаляє всі букви з речення:</b> ${deleteLetters("m", "America")}</p>`);
+document.writeln(`<p><b>Функція, яка видаляє всі букви з речення:</b> ${deleteLetters("a", "America")}</p>`);
