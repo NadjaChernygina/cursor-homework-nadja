@@ -122,14 +122,13 @@ document.writeln(`<p><b>Функцію генерації випадкового
 
 
 function deleteLetters(letter, word) {
-    const modifiedWord = word.toLowerCase();
-    let ourWord;
+    let newWord = word.toLowerCase();
 
     for (let i = 0; i < word.length; i++ ) {
-        ourWord = modifiedWord.replace(letter, '');
+        newWord = newWord.replace(letter, '');
     }
 
-    return ourWord;
+    return newWord;
 }
 
 document.writeln(`<p><b>Функція, яка видаляє всі букви з речення:</b> ${deleteLetters("a", "America")}</p>`);
