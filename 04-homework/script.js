@@ -15,7 +15,7 @@ function getPairs() {
         }
     }
 
-    for (i = 0; i < girlsList.length; i++) {
+    for (let i = 0; i < girlsList.length; i++) {
         allStudents.push(girlsList[i]+ ', ' + boysList[i]);
     }
     return allStudents; 
@@ -27,7 +27,7 @@ const pairs = getPairs(students);
 function getSubject() {
     const studentsSubjects = [];
 
-    for (i = 0; i < pairs.length; i++) {
+    for (let i = 0; i < pairs.length; i++) {
         studentsSubjects.push(pairs[i]+ ': ' + themes[i]);
     }
     return studentsSubjects; 
@@ -40,7 +40,7 @@ const subgects = getSubject(pairs, themes);
 function getMarks() {
     const studentsMark = [];
 
-    for (i = 0; i < students.length; i++) {
+    for (let i = 0; i < students.length; i++) {
         studentsMark.push(students[i]  + ': ' + marks[i]);
     }
 
@@ -53,7 +53,7 @@ const studentsMarks = getMarks(students, marks);
 
 function getRandomMark() {
     const groups = [];
-    for (i = 0; i < students.length; i++) {
+    for (let i = 0; i < pairs.length; i++) {
         groups.push(pairs[i]  + ' : ' + themes[i] + ' = ' + Math.floor(Math.random(marks) * 5 + 1));
     }
 
