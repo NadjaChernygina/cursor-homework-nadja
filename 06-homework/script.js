@@ -46,10 +46,12 @@ console.log(getAverageMark(students[0]));
 
 // task #3
 const getStudentInfo = (student) => {
-    const nameStudent = student.name;
-    const courseStudent = student.course;
-    
-    return { course: courseStudent,  name: nameStudent, averageMark: getAverageMark(student) };
+    const { name, course } = student;
+    return { 
+      course,
+      name,
+      averageMark: getAverageMark(student)
+    };
 };
 
 
