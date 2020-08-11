@@ -11,14 +11,14 @@ function getMyTaxes(salary) {
 console.log(getMyTaxes.call(ukraine, 24000));
 
 // task #2
-function getMiddleTaxes(country) {
+function getMiddleTaxes() {
   return this.tax * this.middleSalary;
 }
 
 console.log(getMiddleTaxes.call(ukraine));
 
 // task #3
-function getTotalTaxes(country) {
+function getTotalTaxes() {
   return this.tax * this.middleSalary * this.vacancies;
 }
 
@@ -27,9 +27,9 @@ console.log(getTotalTaxes.call(latvia));
 
 // task #4
 function getMySalary(country) {
-  let salary = Math.round(1500 + Math.random() * (2000 - 1500));
-  let taxes = Math.round(this.tax * salary);
-  let profit = Math.round(salary - taxes);
+  const salary = Math.round(1500 + Math.random() * (2000 - 1500));
+  const taxes = Math.round(this.tax * salary);
+  const profit = Math.round(salary - taxes);
 
   return { 
     salary,
