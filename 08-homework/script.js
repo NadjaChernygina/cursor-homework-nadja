@@ -66,5 +66,24 @@ console.log('Student: ', student1.getMarks);
 
 
 class BudgetStudent extends Student {
+    constructor(university, course, fullName) {
+      super(university, course, fullName);
+      this.marks = [5, 4, 4, 5];
 
+      setInterval(() => {this.getScholarship()}, 30000);
+     }
+
+    getScholarship() {
+      if (this.getAverageMark() >= 4 && this.ourStudent) {
+        console.log('Ви отримали 1400 грн. стипендії'); 
+      } else {
+       console.log('You are luser(((('); 
+      }
+    }
 }
+
+const budgetStudent = new BudgetStudent('HAI', '4', 'Ivanna Skyba');
+
+//console.log(budgetStudent.dismiss());
+console.log(budgetStudent);
+budgetStudent.getScholarship();
