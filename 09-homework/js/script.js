@@ -22,7 +22,9 @@ const generateBlocks = () => {
 
 
 const generateBlocksInterval = () => {
-  let disable = document.getElementById('disable');
+  let button = document.querySelector('.button2');
+  button.classList.add('disable');
+  button.disabled = true;
+
   setInterval(() => generateBlocks(), 1000);
-  disable.disabled = true;
 }

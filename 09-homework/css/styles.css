@@ -29,4 +29,14 @@ ul {
 
 .buttons button {
 	margin: 25px;
+    padding: 6px 10px;
+    border: 5px solid blue;
+    background: white;
+    color: black;
+    border-radius: 10px;
+    outline: none;
+}
+
+.buttons button.disable {
+    opacity: 0.2;
 }
