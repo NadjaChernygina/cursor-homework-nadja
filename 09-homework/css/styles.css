@@ -3,7 +3,9 @@
   margin: 50px auto;
   display: none;
 }
-
+h1 {
+    text-align: center;
+}
 #blocks.show-block {
 	display: block;
 }
@@ -37,6 +39,6 @@ ul {
     outline: none;
 }
 
-.buttons button.disable {
-    opacity: 0.2;
+.buttons .button-interval.disable {
+    display: none;
 }

@@ -1,3 +1,7 @@
+const buttonInterval = document.querySelector('.button-interval');
+const button = document.querySelector('.button');
+
+
 const getRandomColor = () => {
   
   var letters = '0123456789ABCDEF';
@@ -10,21 +14,27 @@ const getRandomColor = () => {
   return color;
 };
 
-const generateBlocks = () => {
-  let blocksItem = document.querySelectorAll('.inner-block');
-  let blocks = document.getElementById('blocks');
-  blocks.classList.add('show-block');
+const takeRandomColor = () => {
+  const blocksItem = document.querySelectorAll('.inner-block');
 
   for (let i = 0; i < blocksItem.length; i++) {
     blocksItem[i].style.backgroundColor = getRandomColor();
   }
 };
 
+const generateBlocks = () => {
+  let blocks = document.getElementById('blocks');
+  blocks.classList.add('show-block');
+  takeRandomColor();
+};
 
-const generateBlocksInterval = () => {
-  let button = document.querySelector('.button2');
-  button.classList.add('disable');
-  button.disabled = true;
 
-  setInterval(() => generateBlocks(), 1000);
+const generateBlocksInterval = () => { 
+  buttonInterval.classList.add('disable');
+  setInterval(() => takeRandomColor(), 1000);
 }
+
+button.addEventListener('click', function() {
+  buttonInterval.classList.remove('disable');
+}, { once: true });
+
