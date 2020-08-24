@@ -1,0 +1,54 @@
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: cursive;
+    background: #000 url(../images/image.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+h1,
+h2 {
+	text-align: center;
+    color: white;
+    font-size: 80px;
+    margin: 0 0 30px; 
+}
+
+h2 {
+	font-size: 60px
+}
+
+
+.sound-buttons {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+}
+
+.sound-buttons .btn {
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.5);
+    margin: 40px;
+    padding: 10px;
+    width: 80px;
+    height: 80px;
+    transition: all .08s;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 40px;
+    border: 3px solid transparent;
+}
+
+.sound-buttons .btn.active {
+	transform: scale(1.1);
+    box-shadow: 0 0 15px #000;
+    border-color: rgba(0, 0, 0, 0.5);
+}
